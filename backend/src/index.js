@@ -14,7 +14,8 @@ import { connectDB } from "./lib/db.js";
  
 // const app = express(); delete this cuz we already created it on socket.jsfile 
 
-dotenv.config() // function to access the enviromental variable
+dotenv.config() 
+// function to access the enviromental variable
 
 const PORT = process.env.PORT // this is calling port from the enviromental variable
 
