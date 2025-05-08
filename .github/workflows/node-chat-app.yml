@@ -27,9 +27,9 @@ jobs:
         npm install --prefix frontend
         npm run build --prefix frontend
 
-    - name: ✅ Optional: Run backend tests
-      run: |
-        echo "No tests defined yet"
+    # - name: ✅ Optional: Run backend tests
+    #   run: |
+    #     echo "No tests defined yet"
       # You can replace this with your test command if needed:
       # npm test --prefix backend
 

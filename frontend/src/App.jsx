@@ -13,7 +13,6 @@ import { useThemeStore } from './store/useThemeStore.js'
 
 import {Loader} from 'lucide-react'
 import {Toaster} from "react-hot-toast"
-import ErrorBoundary from './hooks/error-boundary.jsx'
 
 
 const App = () => {
