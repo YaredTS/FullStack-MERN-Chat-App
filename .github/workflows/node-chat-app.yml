@@ -1,0 +1,38 @@
+name: Chat App CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: ⬇️ Checkout repository
+      uses: actions/checkout@v3
+
+    - name: 🟢 Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: 📦 Install dependencies and build
+      run: |
+        npm install --prefix backend
+        npm install --prefix frontend
+        npm run build --prefix frontend
+
+    - name: ✅ Optional: Run backend tests
+      run: |
+        echo "No tests defined yet"
+      # You can replace this with your test command if needed:
+      # npm test --prefix backend
+
+    # Optional: If you want to deploy or run something after
+    # - name: 🚀 Start backend (CI only; not for long-lived services)
+    #   run: npm run start --prefix backend
